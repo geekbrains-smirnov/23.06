@@ -73,7 +73,7 @@
 //     }
 
 
-    
+
 // }
 
 // PrintArray(arr);
@@ -96,15 +96,15 @@
 // int summa(int a)
 // {
 //     int sum = 0;
-    
+
 //     for (int i = 1; i <= a; i++ )
 //     {
-         
+
 //          sum = sum + i;  
 //     }
 //      return sum;
 
-    
+
 // }
 
 
@@ -127,20 +127,20 @@
 // {
 //     int count = 0;
 //     if( num==0) count =1;
-    
+
 //     while (num != 0)
 //         {
 //             num = num/10;
 //             count++; 
-            
+
 //         }
-    
+
 //     return count;
 // }
 
 
 // Console.WriteLine(amount(num));
- 
+
 // ------------------------------------------------------------------
 
 
@@ -202,6 +202,163 @@
 // PrintArray(RandomArr(N));
 
 // -----------------------------------------------------------------------------
+
+
+
+// Задача 31. Задайте массив из 12 элементов, заполненный случайными числами из промежутка [-9;9] Найдите сумму отрицательных и положительных элементов массива.
+
+
+// void PrintArray(int[] array)
+//     {
+//         int count = array.Length;
+
+//         for(int i = 0; i < count; i++)
+//         {
+//             Console.Write($"{array[i]} ");
+//         }
+//         Console.WriteLine();
+
+//     }
+// Console.Write("Введите размер массива: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+
+//     int [] arr = new int[n];
+//     int sum_p = 0;
+//     int sum_n = 0;
+//     for(int i =0; i<n; i++)
+//     {
+//         arr[i] = new Random().Next(-9,10);
+//         if(arr[i]>0) sum_p = sum_p+arr[i];
+//         else sum_n = sum_n+arr[i];
+//     }
+
+
+
+
+
+// PrintArray(arr);
+// Console.WriteLine(sum_p);
+// Console.WriteLine(sum_n);
+
+// --------------------------------------------------------------------------------------------------
+
+// Задача 32. преобразование элементв массива с положительных на отрицательные.
+
+// void PrintArray(int[] array)
+//     {
+//         int count = array.Length;
+
+//         for(int i = 0; i < count; i++)
+//         {
+//             Console.Write($"{array[i]} ");
+//         }
+//         Console.WriteLine();
+
+//     }
+// Console.Write("Введите размер массива: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+
+
+//     int [] arr = new int[n];
+//     int sum_p = 0;
+//     int sum_n = 0;
+//     for(int i =0; i<n; i++)
+//     {
+//         arr[i] = new Random().Next(-9,10);
+
+//     }
+//     PrintArray(arr);
+//     for(int i = 0; i<n; i++) arr[i] = arr[i] * -1;
+
+
+
+
+
+// PrintArray(arr);
+
+// ---------------------------------------------------------------------------
+
+
+// Задача 33. Задайте массив. Напишите программу, которая определяет присутствует ли заданное число в массиве.
+
+// void PrintArray(int[] array)
+//     {
+//         int count = array.Length;
+
+//         for(int i = 0; i < count; i++)
+//         {
+//             Console.Write("["+ String.Join(", ", array) +  "]");
+//         }
+//         Console.WriteLine();
+
+//     }
+
+
+// Console.Write("Введите проверочное число: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] massive = {6,7,19,345,3};
+// int i = 0;
+// int mass_i = 0;
+// bool z = false;
+
+// while (i<massive.Length)
+// {
+//     if (massive[i]==n) 
+//     {
+//         z = true;
+//         mass_i = i;
+//     } 
+
+
+//     i++;
+
+
+// }
+
+// PrintArray(massive);
+
+// if (z) Console.WriteLine($"{n} под индексом {mass_i} пристутсвует в массиве");
+// else Console.WriteLine("Данного числа нет в массиве");
+
+
+// -----------------------------------------------------------------
+
+
+// Задача 35. Задайте одномерный массив из 123 случайных чисел. Найдите количество элементов массива значение которых лежат в отрезке [10,99]
+
+// void PrintArray(int[] array)
+//     {
+//         int count = array.Length;
+
+//         for(int i = 0; i < count; i++)
+//         {
+//             Console.Write($"{array[i]} ");
+//         }
+//         Console.WriteLine();
+
+//     }
+
+// Console.Write("Введите размер массива: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[n];
+// int count = 0;
+
+// for (int i = 0; i < n; i++)
+// {
+//     array[i] = new Random().Next(0, 124);
+//     if (array[i] > 9 && array[i] < 100)
+//     {
+
+//         count++;
+//     }
+
+// }
+
+// PrintArray(array);
+// Console.WriteLine(count);
+
+// ---------------------------------------------------------------------
 
 
 
