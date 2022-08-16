@@ -360,5 +360,178 @@
 
 // ---------------------------------------------------------------------
 
+// void PrintArray(int[] array)
+//     {
+//         int count = array.Length;
+
+//         for(int i = 0; i < count; i++)
+//         {
+//             Console.Write($"{array[i]} ");
+//         }
+//         Console.WriteLine();
+
+//     }
+
+// Console.Write("Введите размер массива: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[n];
+// int result = 0;
+// for(int i =0; i<n; i++)
+// {
+//     array[i] = new Random().Next(0,10);
+// }
+// PrintArray(array);
+// for(int i = 0; i<n/2; i++)
+// {
+//     result = result+ array[i] * array[n-i-1];
+//     Console.WriteLine(result);
+// }
+
+// -------------------------------------------------------------------------
+
+// string[,] table = new string[2,5];
+// table[1,2] = "слово";
+
+// for (int rows = 0; rows < 2; rows++)
+// {
+//     for ( int columns = 0; columns < 5; columns++)
+//     {
+//         Console.WriteLine($"{table[rows, columns]}");
+//     }
+// }
+
+
+
+
+
+// void PrintArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             Console.Write($"{matr[i,j]} ");
+//         }
+//     Console.WriteLine();
+//     }
+// }
+
+// void FillArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < matr.GetLength(1); j++)
+//             {
+//                 matr[i,j] = new Random().Next(1,10);
+                
+//             }
+        
+//         }
+// }
+// int[,] matrix = new int[3,4];
+// PrintArray(matrix);
+// FillArray(matrix);
+// Console.WriteLine();
+// PrintArray(matrix);
+
+// -----------------------------------------------------------------------
+
+
+// double Factorial ( int n)
+// {
+//     if (n==1) return 1;
+//     else return n * Factorial(n-1);
+// }
+// for (int i =1; i<40; i++)
+// {
+//     Console.WriteLine($"{i}! = {Factorial(i)}");
+// }
+
+// ------------------------------------------------------------------------------
+
+
+
+// double Fibonacci(int n)
+// {
+//     if (n==1 || n == 2) return 1;
+//     else return Fibonacci(n-1) + Fibonacci(n-2); 
+// }
+
+// for (int i =1; i< 40; i++)
+// {
+//     Console.WriteLine(Fibonacci(i));
+// }
+
+// ----------------------------------------------------------------------------
+
+// Задача 39. Напишите программу которая перевернет одномерный массив.
+
+// void PrintArray(int[] array)
+//     {
+//         int count = array.Length;
+
+//         for(int i = 0; i < count; i++)
+//         {
+//             Console.Write($"{array[i]} ");
+//         }
+//         Console.WriteLine();
+
+//     }
+
+// Console.Write("Введите размер массива: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[n];
+
+    
+// for(int i =0; i<n; i++)
+// {
+//     array[i] = new Random().Next(-9,10);
+
+// }
+// PrintArray(array);
+
+// int bath = 0;
+// for (int i =0; i<n/2; i++)
+// {
+//     bath = array[i];
+//     array[i] = array[n-1-i];
+//     array[n-1-i] = bath;
+// }
+// PrintArray(array);
+// ----------------------------------------------------------------
+
+// Задача 40. Напишите программу которая принимает на вход три числа и проверяет, мжет ли существовать треугольник со сторонами такой длины.
+// теорема о неравенстве: Каждая сторона треугольника меньше суммы двух других сторон.
+
+// Console.Write("Введите первое число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите второе число: ");
+// int b = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Введите третье число: ");
+// int c = Convert.ToInt32(Console.ReadLine());
+
+ 
+// if (a<(b+c) && b<(a+c) && c<(a+b)) Console.WriteLine("Да - это треугольник");
+// else Console.WriteLine("Нет - это не треугольник!");
+// -------------------------------------------------------------------------------
+
+// Задача 42. Напишите программу которая будет преобразовывать десятичное число в двоичное.
+// 45 - 101101
+// 3 - 11
+// 2 - 10
+
+// Console.Write("Введите число: ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// string res = string.Empty;
+// while (a>0)
+// {
+//     res= (a%2) + res;
+//     a = a/2;
+// }
+// Console.WriteLine(res);
+
+// -------------------------------------------------------------------------
+
+
 
 
