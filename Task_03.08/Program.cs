@@ -22,16 +22,16 @@
 
 // string repalce(string text, char oldValue, char newValue)
 // {
-//     string result = string.Empty;
+//     string result1 = string.Empty;
 
 
 //     int length  = text.Length;
 //     for (int i =0; i< length; i++)
 //     {
-//         if(text[i] == oldValue) result = result + $"{newValue}";
-//         else result = result + $"{text[i]}";
+//         if(text[i] == oldValue) result1 = result1 + $"{newValue}";
+//         else result1 = result1 + $"{text[i]}";
 //     }
-//     return result;
+//     return result1;
 // }    
 
 // string newText = repalce(text, ' ', '|');
@@ -375,7 +375,7 @@
 // Console.Write("Введите размер массива: ");
 // int n = Convert.ToInt32(Console.ReadLine());
 // int[] array = new int[n];
-// int result = 0;
+// int result1 = 0;
 // for(int i =0; i<n; i++)
 // {
 //     array[i] = new Random().Next(0,10);
@@ -383,8 +383,8 @@
 // PrintArray(array);
 // for(int i = 0; i<n/2; i++)
 // {
-//     result = result+ array[i] * array[n-i-1];
-//     Console.WriteLine(result);
+//     result1 = result1+ array[i] * array[n-i-1];
+//     Console.WriteLine(result1);
 // }
 
 // -------------------------------------------------------------------------
@@ -423,9 +423,9 @@
 //             for (int j = 0; j < matr.GetLength(1); j++)
 //             {
 //                 matr[i,j] = new Random().Next(1,10);
-                
+
 //             }
-        
+
 //         }
 // }
 // int[,] matrix = new int[3,4];
@@ -482,7 +482,7 @@
 // int n = Convert.ToInt32(Console.ReadLine());
 // int[] array = new int[n];
 
-    
+
 // for(int i =0; i<n; i++)
 // {
 //     array[i] = new Random().Next(-9,10);
@@ -510,7 +510,7 @@
 // Console.Write("Введите третье число: ");
 // int c = Convert.ToInt32(Console.ReadLine());
 
- 
+
 // if (a<(b+c) && b<(a+c) && c<(a+b)) Console.WriteLine("Да - это треугольник");
 // else Console.WriteLine("Нет - это не треугольник!");
 // -------------------------------------------------------------------------------
@@ -532,6 +532,221 @@
 
 // -------------------------------------------------------------------------
 
+// Задача 46: Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+// m = 3, n = 4.
+// 1 4 8 19
+// 5 -2 33 -2
+// 77 3 8 1
+
+// void PrintArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             Console.Write($"{matr[i,j]} ");
+//         }
+//     Console.WriteLine();
+//     }
+// }
+
+// void FillArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < matr.GetLength(1); j++)
+//             {
+//                 matr[i,j] = new Random().Next(1,10);
+
+//             }
+
+//         }
+// }
+// Console.Write("Задайте количество строк: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Задайте количество столбцов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[,] array = new int[m,n];
+// FillArray(array);
+// PrintArray(array);
+
+// --------------------------------------------------------------------------------------
+
+
+// Задача 48: Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aₘₙ = m+n. 
+// Выведите полученный массив на экран.
+// m = 3, n = 4.
+// 0 1 2 3
+// 1 2 3 4
+// 2 3 4 5
+
+// void PrintArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             Console.Write($"{matr[i,j]} ");
+//         }
+//     Console.WriteLine();
+//     }
+// }
+
+// void FillArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < matr.GetLength(1); j++)
+//             {
+//                 matr[i,j] = i+j;
+
+//             }
+
+//         }
+// }
+// Console.Write("Задайте количество строк: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Задайте количество столбцов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[,] array = new int[m,n];
+// FillArray(array);
+// PrintArray(array);
+
+// ----------------------------------------------------------------------------------
+
+// Задача 49: Задайте двумерный массив. Найдите элементы, у которых оба индекса чётные, и замените эти элементы на их квадраты.
+// Например, изначально массив
+// выглядел вот так:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+
+// void PrintArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             Console.Write($"{matr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+// void FillArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             matr[i, j] = new Random().Next(1, 10);
+
+//         }
+
+//     }
+// }
+
+
+// Console.Write("Задайте количество строк: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Задайте количество столбцов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[,] array = new int[m, n];
+
+// FillArray(array);
+// PrintArray(array);
+// void ChangeArray(int [,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             if (i % 2 != 0 && j % 2 != 0) array[i, j] = array[i, j]*array[i, j];
+//         }
+//     }
+// }
+
+
+// Console.WriteLine();
+
+// ChangeArray(array);
+// PrintArray(array);
+
+// ------------------------------------------------------------------------------------------
+
+
+// Задача 51: Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// Сумма элементов главной диагонали: 1+9+2 = 12
+
+void PrintArray(int[,] matr)
+{
+    for (int i = 0; i < matr.GetLength(0); i++)
+    {
+        for (int j = 0; j < matr.GetLength(1); j++)
+        {
+            Console.Write($"{matr[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
 
 
 
+Console.Write("Задайте количество строк: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Задайте количество столбцов: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[,] array = new int[m, n];
+void FillArray(int[,] matr)
+{
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            matr[i, j] = new Random().Next(1, 10);
+
+        }
+
+    }
+}
+
+
+void ChangeArray(int [,] array)
+{
+    int result1 = 0;
+    int result2 = 0;
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+             
+             if(i==j) result1 = result1 + array[i, j];
+             
+             else if(i+j==m-1) result2 = result2 + array[i, j];
+             
+            
+            
+        }
+        
+    }
+    Console.WriteLine($"{result1} , {result2}");
+    
+    
+}
+
+
+
+try
+{
+FillArray(array);
+PrintArray(array);
+Console.WriteLine();
+ChangeArray(array);
+}
+catch
+{
+    Console.WriteLine("Нужно что бы m = n");
+}
