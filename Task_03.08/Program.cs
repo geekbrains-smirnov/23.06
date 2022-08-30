@@ -681,72 +681,264 @@
 // 8 4 2 4
 // Сумма элементов главной диагонали: 1+9+2 = 12
 
-void PrintArray(int[,] matr)
-{
-    for (int i = 0; i < matr.GetLength(0); i++)
-    {
-        for (int j = 0; j < matr.GetLength(1); j++)
-        {
-            Console.Write($"{matr[i, j]} ");
-        }
-        Console.WriteLine();
-    }
-}
+// void PrintArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             Console.Write($"{matr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
 
 
 
-Console.Write("Задайте количество строк: ");
-int m = Convert.ToInt32(Console.ReadLine());
-Console.Write("Задайте количество столбцов: ");
-int n = Convert.ToInt32(Console.ReadLine());
-int[,] array = new int[m, n];
-void FillArray(int[,] matr)
-{
-    for (int i = 0; i < m; i++)
-    {
-        for (int j = 0; j < m; j++)
-        {
-            matr[i, j] = new Random().Next(1, 10);
+// Console.Write("Задайте количество строк: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Задайте количество столбцов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[,] array = new int[m, n];
+// void FillArray(int[,] matr)
+// {
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < m; j++)
+//         {
+//             matr[i, j] = new Random().Next(1, 10);
 
-        }
+//         }
 
-    }
-}
+//     }
+// }
 
 
-void ChangeArray(int [,] array)
-{
-    int result1 = 0;
-    int result2 = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
+// void ChangeArray(int [,] array)
+// {
+//     int result1 = 0;
+//     int result2 = 0;
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
              
-             if(i==j) result1 = result1 + array[i, j];
+//              if(i==j) result1 = result1 + array[i, j];
              
-             else if(i+j==m-1) result2 = result2 + array[i, j];
+//              else if(i+j==m-1) result2 = result2 + array[i, j];
              
             
             
-        }
+//         }
         
-    }
-    Console.WriteLine($"{result1} , {result2}");
+//     }
+//     Console.WriteLine($"{result1} , {result2}");
     
     
-}
+// }
 
 
 
-try
+// try
+// {
+// FillArray(array);
+// PrintArray(array);
+// Console.WriteLine();
+// ChangeArray(array);
+// }
+// catch
+// {
+//     Console.WriteLine("Нужно что бы m = n");
+// }
+// --------------------------------------------------------------------------------------------
+
+
+// Задача 53: Задайте двумерный массив. Напишите программу, которая поменяет местами первую и последнюю строку массива.
+
+// void PrintArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             Console.Write($"{matr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+
+// Console.Write("Задайте количество строк: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Задайте количество столбцов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[,] array = new int[m, n];
+// void FillArray(int[,] matr)
+// {
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < m; j++)
+//         {
+//             matr[i, j] = new Random().Next(1, 10);
+
+//         }
+
+//     }
+// }
+
+// void ChangeArray(int [,] array)
+// {
+    
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             int t = array[0,j];
+//             array[0,j] = array[array.GetLength(0)-1,j];
+//             array[array.GetLength(0)-1,j] = t;
+            
+//         }
+    
+// }
+
+// FillArray(array);
+// PrintArray(array);
+// ChangeArray(array);
+// Console.WriteLine("Образованный масссив: ");
+// PrintArray(array);
+// ----------------------------------------------------------------------------------------------------
+
+
+// Задача 55: Задайте двумерный массив. Напишите программу, которая заменяет строки на столбцы. В случае, 
+// если это невозможно, программа должна вывести сообщение для пользователя.
+
+// void PrintArray(int[,] matr)
+// {
+//     for (int i = 0; i < matr.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < matr.GetLength(1); j++)
+//         {
+//             Console.Write($"{matr[i, j]} ");
+//         }
+//         Console.WriteLine();
+//     }
+// }
+
+
+
+// Console.Write("Задайте количество строк: ");
+// int m = Convert.ToInt32(Console.ReadLine());
+// Console.Write("Задайте количество столбцов: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[,] array = new int[m, n];
+// void FillArray(int[,] matr)
+// {
+//     for (int i = 0; i < m; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             matr[i, j] = new Random().Next(1, 10);
+
+//         }
+
+//     }
+// }
+
+// void TransPons(int [,] array, int [,] array_2)
+// {
+    
+        
+
+//         for (int i = 0; i < array.GetLength(0); i++)
+//         {
+//             for (int j = 0; j < array.GetLength(1); j++)
+//             {
+//                 array_2[i, j] = array[j,i];
+
+//             }
+
+//         }
+    
+// }
+
+// FillArray(array);
+// PrintArray(array);
+
+// Console.WriteLine("Образованный масссив: ");
+
+
+// int [,] array_2 = new int[n,m];
+// try
+// {
+//     TransPons(array, array_2);
+//     PrintArray(array_2);
+
+// }
+// catch 
+// {
+//     Console.WriteLine("Размерности должны быть одинаковы: ");
+// } 
+
+// ---------------------------------------------------------------------------------------------------------
+
+// Задача 63: Задайте значение N. Напишите программу, которая выведет все натуральные числа в промежутке от 1 до N.
+// N = 5 -> "1, 2, 3, 4, 5"
+// N = 6 -> "1, 2, 3, 4, 5, 6"
+
+// string create_number(int b)
+// {
+//   if(1<= b ) return create_number(b - 1) + $"{b}, ";
+//   else return string.Empty;
+// }
+
+// Console.WriteLine(create_number(6));
+
+// ----------------------------------------------------------------------------------------------------------------------
+
+// Задача 65: Задайте значения M и N. Напишите программу, которая выведет все натуральные числа в промежутке от M до N.
+// M = 1; N = 5 -> "1, 2, 3, 4, 5"
+// M = 4; N = 8 -> "4, 5, 6, 7, 8"
+
+
+
+// string create_number(int a, int b)
+// {
+//   if(a <= b ) return create_number(a, b - 1) + $"{b}, ";
+//   else return string.Empty;
+
+// }
+
+// Console.WriteLine(create_number(3, 6));
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+
+// Задача 67: Напишите программу, которая будет принимать на вход число и возвращать сумму его цифр.
+// 453 -> 12
+// 45 -> 9
+
+
+// int SumDigit(int n)
+// {
+//   if (n==0) return 0;
+//   else return n%10 + SumDigit(n/10);
+
+// }
+
+// Console.WriteLine(SumDigit(453));
+
+// ------------------------------------------------------------------------------------------------------------------------
+
+
+// Задача 69: Напишите программу, которая на вход принимает два числа A и B, и возводит число А в целую степень B с помощью рекурсии.
+// A = 3; B = 5 -> 243 (3⁵)
+// A = 2; B = 3 -> 8
+
+int PowerRec(int a, int b)
 {
-FillArray(array);
-PrintArray(array);
-Console.WriteLine();
-ChangeArray(array);
+  if (b==0) return 1;
+  else return PowerRec(a, b - 1) *a;
+
 }
-catch
-{
-    Console.WriteLine("Нужно что бы m = n");
-}
+
+Console.WriteLine(PowerRec(3,5));
+
